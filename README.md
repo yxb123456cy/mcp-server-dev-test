@@ -1,15 +1,50 @@
 # mcp-server-dev-test
 
-To install dependencies:
+Model Context Protocol (MCP) Server implementation based on `@modelcontextprotocol/sdk`, Node.js, TypeScript, and Bun. Designed for serverless and edge environment deployments including Vercel and Cloudflare.
+
+## Architecture
+
+* **Runtime:** Bun / Node.js
+* **Language:** TypeScript
+* **Protocol:** Model Context Protocol (MCP)
+
+## Prerequisites
+
+* Bun >= 1.0.0
+* Node.js >= 18.0.0 (required for Vercel deployment compatibility)
+
+## Installation
 
 ```bash
 bun install
 ```
 
-To run:
+## Development
 
 ```bash
-bun run index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.3.1. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Deployment
+
+### Vercel (Serverless Functions)
+
+Ensure the `api/` directory contains the serverless function entry points.
+Execute deployment via Vercel CLI:
+
+```bash
+vercel deploy --prod
+```
+
+### Cloudflare Workers
+
+Ensure `wrangler.toml` is configured with the correct entry point (e.g., `src/index.ts`).
+Execute deployment via Wrangler:
+
+```bash
+bun run wrangler deploy
+```
+
+## Protocol Specifications
+
+Refer to the official [Model Context Protocol documentation](https://modelcontextprotocol.io/) for detailed information regarding MCP architecture, standard transports, and security models.
