@@ -1,6 +1,6 @@
 {
   "name": "mcp-server-dev-test",
-  "module": "src/server.ts",
+  "main": "src/server.ts",
   "type": "module",
   "private": true,
   "scripts": {
