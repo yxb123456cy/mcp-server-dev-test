@@ -1,0 +1,22 @@
+{
+  "name": "mcp-server-dev-test",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "cz-git": "^1.13.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "useEmoji": true
+    }
+  }
+}
