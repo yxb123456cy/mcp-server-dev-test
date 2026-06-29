@@ -6,11 +6,14 @@
   "scripts": {
     "commit": "git-cz",
     "dev": "bunx @modelcontextprotocol/inspector bun run src/main.ts",
-    "dev:stdio": "bunx @modelcontextprotocol/inspector bun run src/local-stdio.ts"
+    "dev:stdio": "bunx @modelcontextprotocol/inspector bun run src/local-stdio.ts",
+    "dev:server": "bun run src/simpleStreamableHttp.ts",
+    "client:test": "bun run src/test-client.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "cz-git": "^1.13.1"
+    "cz-git": "^1.13.1",
+    "tsx": "^4.22.4"
   },
   "peerDependencies": {
     "typescript": "^5"
